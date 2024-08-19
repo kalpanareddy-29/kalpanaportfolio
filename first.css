@@ -1,0 +1,541 @@
+
+*{
+    background-color:black;
+    color:white;
+    
+}
+.port {
+    font-size: 3rem;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeInGlow 2s ease-out, glow 1.5s ease-in-out infinite alternate,blink 4s infinite;;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes fadeInGlow {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
+    }
+    to {
+        text-shadow: 0 0 20px #ffffff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff, 0 0 80px #ff00ff;
+    }
+}
+
+.menu-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: violet; /* Violet background */
+    color: black; /* Text color in black */
+    z-index: 1000;
+}
+.menu ul {
+    list-style-type: none;
+    margin:0;
+    padding: 15px;
+    display: flex;
+    justify-content: center;  
+    background-color:violet;
+}
+.menu li {
+    margin: 0 15px;
+    background-color: violet;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black; /* Black text color for links */
+    font-size: 30px;
+    font-style: italic;
+    transition: color 0.3s ease;
+    background-color: violet;
+}
+.menu li a:hover{
+    color:chocolate;
+    font-size: 35px;
+    font-style:oblique;
+    font-weight: bold;
+}
+#about {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right:300px;
+    color:white;
+}
+.about-box {
+    max-width: 60%; /* Limit width of the text section */
+    padding: 0px;
+    font-size:20px;
+    background-color: black; /* Light background color for the box */
+    border: 1px solid black; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 4px 5px 8px 2px white;
+    color:white; /* Subtle shadow */
+}
+.about-box:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px whitesmoke; /* Add shadow on hover */
+}
+
+.about-context {
+    max-width: 100%; 
+    margin-left:30px;/* Limit width of the text section */
+}
+
+#about h1 {
+    font-size: 24px;
+    line-height: 1.4;
+    color:white;
+}
+
+    .roles {
+        font-size: 2.5rem;
+        color:#007bff;
+        text-align: center;
+        margin-top: 10px;
+        opacity: 0;
+        transform: translateY(10px);
+        text-shadow: 0 0 10px whitesmoke;
+        animation: fadeInUpShadowFloat 2s ease-out forwards, continuousFloat 3s ease-in-out infinite;
+    }
+    @keyframes fadeInUpShadowFloat {
+        0% {
+            opacity: 0;
+            transform: translateY(10px);
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Initial subtle shadow */
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0); /* Final position */
+            text-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+        }
+    }
+    
+    @keyframes continuousFloat {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px); /* Adjust the amount of floating */
+        }
+    }
+
+button{
+    width:200px;
+    padding:10px;
+    background-color:cyan;
+    color:black;
+    font-size:15px;
+    font-weight: bold;
+    margin-left:120px;
+    margin-bottom:10px;
+    border-radius:20px;
+}
+button:hover{
+    background-color:orangered;
+
+}
+
+#about img {
+    width: 300px; /* Adjust size as needed */
+    height: 350px;;
+    border-radius: 40%; /* Circular image if needed */
+    box-shadow: 0 4px 8px white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Optional shadow */
+}
+#about img:hover{
+    transform: scale(1.1) rotate(5deg); /* Slight zoom and rotation on hover */
+    box-shadow: 0 8px 16px violet; /* Increase shadow on hover */
+    filter: brightness(1.0);
+    border:#007bff; 
+}
+.education-box {
+    margin-top: 40px; /* Space above the education section */
+    padding: 20px;
+    margin-left:100px;
+    margin-right:50px;
+    background-color: black; /* Light background color */
+    border: 1px solid black; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 2px 4px 8px 4px white; /* Subtle shadow */
+}
+
+.education-box h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.education-item {
+    margin-bottom: 20px;
+    border: 1px solid black; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px white;
+}
+.education-box :hover{
+    
+    transform: scale(1.02);
+}
+.education-item h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.education-item p {
+    margin: 0;
+    line-height: 1.6;
+
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #about {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center;
+    }
+
+    .profile-image {
+        width: 200px; /* Adjust image size on smaller screens */
+    }
+
+    .about-box, .education-box {
+        max-width: 100%;
+        padding: 15px;
+    }
+}
+.internships {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping if there are too many boxes */
+    gap: 40px; /* Space between boxes */
+    justify-content: center;
+}
+
+.internship-box {
+    background:black;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px white; /* Shadow for the box */
+    overflow: hidden;
+    width: 300px; /* Fixed width for the boxes */
+    display: flex;
+    flex-direction: column; /* Stack image and content vertically */
+}
+.internship-box:hover{
+    transform: scale(1.1);
+}
+
+.internship-content {
+    padding: 15px;
+    font-size: 17px;
+}
+
+.internship-content h3 {
+    margin: 0 0 10px; /* Spacing below the heading */
+    font-size: 18px;
+}
+.interncert{
+    padding:10px;
+    width:250px;
+    background-color:orange;
+    margin-left:5px;
+}
+.interncert:hover{
+    background-color:blueviolet;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping if there are too many boxes */
+    gap: 40px; /* Space between boxes */
+    justify-content: center;
+}
+
+.project-box {
+    background: black;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px white;/* Shadow for the box */
+    overflow: hidden;
+    width: 300px; /* Fixed width for the boxes */
+    display: flex;
+    flex-direction: column; /* Stack image and content vertically */
+}
+.project-box:hover{
+    transform: scale(1.15); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px whitesmoke; 
+
+}
+.moreproj a{
+    color:olivedrab;
+}
+.moreproj a:hover{
+    color:#007bff;
+    font-size:20px;
+
+}
+
+.project-image {
+    width: 100%;
+    height: 150px; /* Fixed height for the image */
+    object-fit: cover; /* Ensures the image covers the box area without distortion */
+}
+
+.project-content {
+    padding: 15px;
+}
+
+.project-content h3 {
+    margin: 0 0 10px; /* Spacing below the heading */
+    font-size: 18px;
+}
+
+.project-content p {
+    margin: 0;
+    font-size: 14px;
+    color: white;
+}
+.pro{
+    width:200px;
+    padding:10px;
+    margin-top:10px;
+    margin-left:20px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.skills {
+    margin-bottom: 20px;
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Space between boxes */
+    margin-left:250px;
+
+}
+
+.box {
+    background:black;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px white;
+    padding: 15px;
+    width: 500px; /* Two boxes per row with space between */
+    text-align: center;
+}
+.box:hover {
+    transform: scale(1.25); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px whitesmoke; /* Add shadow on hover */
+}
+
+.box h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color:orange;
+}
+
+
+.ski{
+    list-style-type:None;
+    display:flex;
+
+}
+.ski li {
+    margin-bottom: 10px; 
+    padding:20px;/* Space between list items */
+}
+
+.ski img {
+    width: 60px; /* Adjust size as needed */
+    height: 50px;
+    display: block;
+    margin: 0 auto; /* Center the image */
+}
+.skil img{
+    width:50px;
+    height:50px;
+    display:block;
+    margin: 0 auto;
+
+}
+.skil li {
+    margin-bottom: 10px; 
+    padding:15px;/* Space between list items */
+}
+.skil{
+    list-style-type: None;
+    display:flex;
+}
+.certifications {
+    margin-bottom: 20px;
+    margin-left:150px;
+    margin-right:50px;
+    padding: 20px; /* Padding inside the box */
+    background:black; /* Background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px white; /* Box shadow */
+}
+.certifications:hover{
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px whitesmoke; 
+}
+.certifications h2 {
+    font-size: 30px;
+    color:cyan;
+
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.cert-list {
+    list-style: none;
+    padding: 0;
+}
+
+.cert-list li {
+    font-size: 16px;
+    color:white;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.cert-list li::before {
+    content: "✔";
+    color: #28a745;
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 16px;
+}
+
+.certifications {
+    margin-bottom: 20px;
+    padding: 20px;
+    background:black;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px white;
+}
+
+.extracurricular {
+    margin-bottom: 20px;
+    padding: 20px;
+    margin-left:150px;
+    margin-right:40px;
+    background:black;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px white;
+}
+.extracurricular:hover{
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px whitesmoke;
+}
+
+.extracurricular h2 {
+    font-size: 30px;
+    color: cyan;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.activities-list {
+    list-style: none;
+    padding: 0;
+}
+
+.activities-list li {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.activities-list li::before {
+    content: "✔";
+    color: #28a745;
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 16px;
+}
+/* Social Media Section */
+.social-media {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    margin-left:150px;
+    margin-right:50px;
+    background-color:black;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px white;
+}
+.social-media:hover{
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px whitesmoke;
+
+}
+.social-media h2 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img {
+    width: 40px;
+    height: 40px;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
